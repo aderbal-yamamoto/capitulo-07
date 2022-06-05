@@ -37,7 +37,7 @@ abstract class Field implements FormElementInterface{
         return $this->name;
     }
     public function setLabel($label){
-        $this->FormLabel = $label;
+        $this->formLabel = $label;
     }
     public function getLabel(){
         return $this->formLabel;

@@ -4,14 +4,14 @@ namespace Livro\Widgets\Form;
 
 use Livro\Control\ActionInterface;
 
-class form{
+class Form{
 
 	protected $title;
 	protected $fields;
 	protected $actions;
 
 	public function __construct ($name = 'my_form'){
-		$this->setName('$name');
+		$this->setName($name);
 	}
 	public function setName($name){
 		$this->name = $name;
@@ -41,8 +41,8 @@ class form{
 	}
 	public function setData($object){
 		foreach ($this->fields as $name =>$field){
-			if($name AND isset($object->name)){
-				$field->setValue($object->name);
+			if($name AND isset($object->$name)){
+				$field->setValue($object->$name);
 			}
 		}
 	}
