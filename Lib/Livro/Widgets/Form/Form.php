@@ -25,7 +25,7 @@ class form{
 	public function getTitle(){
 		return $this->title;
 	}
-	public function addFields($label, FormElementInterface $object, size ='100%' ){
+	public function addField($label, FormElementInterface $object, $size ='100%' ){
 		$object->setSize($size);
 		$object->setLabel($label);
 		$this->fields[$object->getName()] = $object;
@@ -46,7 +46,7 @@ class form{
 			}
 		}
 	}
-	public function getData($class = 'stdClass')\{
+	public function getData($class = 'stdClass'){
 		$object = new $class;
 		foreach ($this->fields as $key =>$fieldObject) {
 			$val = isset($_POST[$key]) ? $_POST[$key] : '';
