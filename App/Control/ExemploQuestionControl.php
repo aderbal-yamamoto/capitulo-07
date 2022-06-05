@@ -21,7 +21,7 @@ class ExemploQuestionControl extends Page
 
 	}
 	public function onNegacao() {
-		print "Você escolheu negar a a questão";
+		print "Você escolheu negar a questão";
 	}
 }
  ?>
