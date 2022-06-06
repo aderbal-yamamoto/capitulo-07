@@ -21,11 +21,11 @@ class FormWrapper {
         $element->class = "form-horizontal";
         $element->enctype = "multipart/form-data";
         $element->method = 'post';
-        $element->name =$this->decorated->getname();
+        $element->name =$this->decorated->getName();
         $element->width ='100%';
-        foreach ($this->decorated->getfields() as $field) {
-            $group = new ELement ('div');
-            $group->class ='form-group';
+        foreach ($this->decorated->getFields() as $field) {
+            $group = new Element ('div');
+            $group->class = 'form-group';
 
             $label = new Element('label');
             $label->class = 'col-sm-2 control-label';
@@ -47,7 +47,7 @@ class FormWrapper {
         foreach ($this->decorated->getActions() as $label => $action){
             $name = strtolower(str_replace(' ', '_', $label));
             $button = new Button($name);
-            $button->setFormname($this->decorated->getName());
+            $button->setFormName($this->decorated->getName());
             $button->setAction($action, $label);
             $button->class = 'btn ' . (($i==0) ? 'btn-success' : 'btn-default' );
 
@@ -58,6 +58,6 @@ class FormWrapper {
         $panel = new Panel($this->decorated->getTitle());
         $panel->add($element);
         $panel->addFooter($group);
-        $panel->show;
+        $panel->show();
     }
 }

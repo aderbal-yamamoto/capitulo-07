@@ -20,7 +20,7 @@ class Form{
 		return $this->name;
 	}
 	public function setTitle($title){
-		$this->setTitle = $title;
+		$this->title = $title;
 	}
 	public function getTitle(){
 		return $this->title;
