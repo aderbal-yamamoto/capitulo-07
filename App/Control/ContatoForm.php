@@ -49,7 +49,7 @@ class ContatoForm extends Page
     {
         try {
             // obtem os dados
-            $dados = $this->form->getDadta();
+            $dados = $this->form->getData();
 
             // mantem os dados preenchidos
             $this->form->setData($dados);
